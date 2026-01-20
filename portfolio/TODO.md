@@ -1,0 +1,1 @@
+- [x] Update the date display in Navbar.jsx to remove all commas using regex replace
