@@ -1,5 +1,5 @@
-import React from 'react'
-import {Rnd} from "react-rnd"
+import Macbook from "./Macbook"
+
 
 
 
@@ -54,31 +54,9 @@ const Github = () => {
 ]
   return (
     <>
-    <Rnd  default={{
-    x: 100,
-    y: 200,
-    width: 300,
-    height: 200,
-  }}
-    minWidth={200}
-  minHeight={300}
-  >
-             <div className="bg-black rounded-xl w-full h-full flex flex-col overflow-hidden">
 
-        {/* Title bar */}
-        <nav className="flex items-center gap-2 px-4 py-2 border-b border-zinc-800">
-          <span className="h-3 w-3 rounded-full bg-red-500" />
-          <span className="h-3 w-3 rounded-full bg-yellow-400" />
-          <span className="h-3 w-3 rounded-full bg-green-500" />
-          <p className="text-zinc-300 text-sm ml-2">
-            Fardeen Khan — github
-          </p>
-        </nav>
-
-        {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6">
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
-
+<Macbook aloo={"khan"} posx={100}posy={200}>
+   <div className=" grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
             {git.map((ele) => (
               <section
                 key={ele.id}
@@ -102,8 +80,8 @@ const Github = () => {
                 <div className="flex flex-wrap gap-2 mt-2">
                   {ele.tags.map((item, i) => (
                     <span
-                      key={i}
-                      className="text-[10px] px-2 py-1 bg-zinc-700 rounded-full whitespace-nowrap"
+                    key={i}
+                    className="text-[10px] px-2 py-1 bg-zinc-700 rounded-full whitespace-nowrap"
                     >
                       {item}
                     </span>
@@ -133,10 +111,8 @@ const Github = () => {
               </section>
             ))}
 
-          </div>
-        </div>
-      </div>
-    </Rnd>
+</div>
+                      </Macbook>
     </>
   )
 }

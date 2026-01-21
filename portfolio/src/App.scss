@@ -1,75 +1,133 @@
-*{
+* {
     box-sizing: border-box;
 
 }
-body,html,#root{
+
+body,
+html,
+#root {
     height: 100%;
     width: 100%;
-        overflow: hidden;
+    overflow: hidden;
 
     // font-family: s;
 }
-main{
+
+main {
     height: 100%;
     width: 100%;
-    background: url(https://github.com/ankurdotio/mac-os/blob/main/public/mac-wallpaper.jpg?raw=true);
-    background-size: cover;
-    background-position: center;
+    // background: url(https://github.com/ankurdotio/mac-os/blob/main/public/mac-wallpaper.jpg?raw=true);
+    // background-size: cover;
+    // background-position: center;
+    position: relative;
+
+}
+.blurist{
+background-color: #1e1e1e;
+backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    /* Soft shadow */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
 }
 .git,
-    .cli {
-        background-color: black;
-    }
+.cli {
+    background-color: black;
+}
 
-    .note {
-        background: linear-gradient(to bottom, rgb(255, 179, 87), rgb(255, 153, 28))
-    }
+.note {
+    background: linear-gradient(to bottom, rgb(255, 179, 87), rgb(255, 153, 28))
+}
 
-    .pdf {
-        background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40));
-    }
+.pdf {
+    background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40));
+}
 
-    .calen,
-    .mail {
-        background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255));
-    }
+.calen,
+.mail {
+    background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255));
+}
 
-    .spot {
-        background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12));
-    }
+.spot {
+    background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12));
+}
 
-    .link {
-        background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 154));
+.link {
+    background: linear-gradient(to bottom, rgb(163, 97, 170), rgb(142, 33, 154));
+}
+@media (min-width: 768px) {
+    
+    .icon:hover+.icon,
+    .icon:has(+ .icon:hover) {
+    
+        transform: scale(1.1) translateY(-10%);
     }
-    .icon:hover + .icon,
-    .icon:has(+ .icon:hover)
-    {
-        
-transform:scale(1.1) translateY(-10%);
-    }
-       .icon {
-      
+    
+    .icon {
+    
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
-    /* width of scrollbar */
+
+}
+
+/* width of scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;          /* ← medium width */
-  height: 10px;
+    width: 10px;
+    /* ← medium width */
+    height: 10px;
 }
 
 /* scrollbar track */
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;
+    background: #1e1e1e;
 }
 
 /* scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #555;
-  border-radius: 10px;
-  border: 2px solid #1e1e1e;
+    background-color: #555;
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
 }
 
 /* hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #777;
+    background-color: #777;
+}
+
+.mac-dock {
+    /* Glassmorphism background */
+    background: rgba(41, 40, 40, 0.3);
+    /* High blur and saturation for macOS feel */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    /* Subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    /* Soft shadow */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+pre{
+    background-color: transparent !important;
+    overflow-x: hidden !important;
+}
+
+
+.embed-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* outer scrollbar removed */
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
