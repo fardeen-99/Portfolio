@@ -1,1 +1,5 @@
 - [x] Update the date display in Navbar.jsx to remove all commas using regex replace
+- [x] Import useRef from React in Cli.jsx
+- [x] Declare cliRef = useRef(null) in Cli component
+- [x] Modify section: add ref={cliRef}, change overflow-hidden to overflow-auto, add scroll-behavior smooth
+- [x] Add onCommand prop to Terminal for smooth scrolling to answer

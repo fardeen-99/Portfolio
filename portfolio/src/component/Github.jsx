@@ -55,8 +55,8 @@ const Github = () => {
   return (
     <>
 
-<Macbook aloo={"khan"} posx={100}posy={200}>
-   <div className=" grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
+<Macbook aloo={"khan"} posx={100}posy={200} >
+   <div className=" grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 m-6">
             {git.map((ele) => (
               <section
                 key={ele.id}
@@ -113,6 +113,7 @@ const Github = () => {
 
 </div>
                       </Macbook>
+            
     </>
   )
 }

@@ -1,15 +1,19 @@
 
+import { useState } from "react"
 import {Rnd} from "react-rnd"
 
-const Macbook = ({children,aloo,posx,posy}) => {
+const Macbook = ({children,aloo,posx,posy,width=300,height=300}) => {
+
+  
   return (
     <>
     
     <Rnd  default={{
     x: posx,
     y: posy,
-    width: 300,
-    height: 300,
+    width: width,
+    height: height,
+    
   }}
     minWidth={250}
   minHeight={300}
@@ -27,7 +31,7 @@ const Macbook = ({children,aloo,posx,posy}) => {
         </nav>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6 ">
+        <div className="flex-1 overflow-y-auto  ">
 
 {children}
               

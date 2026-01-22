@@ -5,6 +5,9 @@ import Github from "./component/Github"
 import Navbar from "./component/Navbar"
 import Note from "./component/Note"
 import Resume from "./component/Resume"
+import Spotify from "./component/Spotify"
+import Cli from "./component/Cli"
+import Calender from "./component/Calender"
 
 const App=()=>{
   const audioRef = useRef(null);
@@ -18,11 +21,14 @@ const App=()=>{
       <div className="md:hidden">
       <video src="/k2.mp4" className=" fixed h-full w-full inset-0  object-fill " muted autoPlay loop></video>
       </div>
-   <Navbar />
+   <Navbar/>
    <Footer />
    <Github />
    <Note />
 <Resume />
+<Spotify />
+<Cli />
+<Calender />
     </main>
     </>
   )

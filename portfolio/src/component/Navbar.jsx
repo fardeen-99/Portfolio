@@ -30,7 +30,7 @@ hour12:true
 
   return (
     <>
-      <nav className='flex justify-between  px-3 py-1 mac-dock text-white'>
+      <nav className='flex justify-between  px-3 py-1 mac-dock text-white z-50 fixed  w-full'>
         <div className='flex gap-3 capitalize'>
           <img src="/src/icons/apple.svg" alt="appe" />
           <p className="text-sm " >fardeen khan</p>

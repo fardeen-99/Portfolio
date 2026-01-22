@@ -15,7 +15,7 @@ fetch("/note.txt").then((note)=>note.text()).then((data)=>setname(data))
   return (
     <>
     <Macbook posx={300} posy={100} aloo={"NOTES"}>
-<section className='text-zinc-300 text-[10px] overflow-x-hidden bg-transparent'>
+<section className='text-zinc-300 text-[10px] overflow-x-hidden bg-transparent m-4'>
     <Syntax style={atelierDuneDark} language='typescript' >
     {name}
 
