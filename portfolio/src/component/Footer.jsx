@@ -76,7 +76,7 @@ useEffect(() => {
     <audio src="/audio.mp4" ref={refu} loop></audio>
       <footer className='mac-dock flex gap-2  absolute bottom-5 left-[50%] transform translate-x-[-50%] px-2 sm:px-4 py-1 rounded-xl  w-[90%] overflow-x-auto sm:overflow-x-visible  no-scrollbar' >
         
-        <img className='px-3 py-2 rounded-xl git lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/github.svg" alt=""
+        <img className='px-3 py-2 rounded-xl git lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/github.svg" alt=""
         
         onClick={()=>setopen(prev=>({...prev,github:{...prev.github,window:!prev.github.window}}))}
         />
@@ -84,7 +84,7 @@ useEffect(() => {
         <img
                 onClick={()=>setopen(prev=>({...prev,notes:{...prev.notes,window:!prev.notes.window}}))}
 
-        className='px-3 py-2 rounded-xl note lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/note.svg" alt="" />
+        className='px-3 py-2 rounded-xl note lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/note.svg" alt="" />
          <div
         
           onClick={setting}
@@ -108,18 +108,18 @@ useEffect(() => {
         <img
                 onClick={()=>setopen(prev=>({...prev,pdf:{...prev.pdf,window:!prev.pdf.window}}))}
 
-        className='px-3 py-2 rounded-xl pdf lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/pdf.svg" alt="" />
+        className='px-3 py-2 rounded-xl pdf lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/pdf.svg" alt="" />
 
         <img
                 onClick={()=>setopen(prev=>({...prev,calender:{...prev.calender,window:!prev.calender.window}}))}
-        className='px-3 py-2 rounded-xl calen lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/calender.svg" alt="" />
+        className='px-3 py-2 rounded-xl calen lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/calender.svg" alt="" />
 
         <img
                         onClick={()=>setopen(prev=>({...prev,spotify:{...prev.spotify,window:!prev.spotify.window}}))}
-        className='px-3 py-2 rounded-xl spot lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/spotify.svg" alt="" />
+        className='px-3 py-2 rounded-xl spot lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/spotify.svg" alt="" />
 
         <img
-         className='px-3 py-2 rounded-xl mail lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/mail.svg" alt=""
+         className='px-3 py-2 rounded-xl mail lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/mail.svg" alt=""
         onClick={()=>{
           window.open("https://mail.google.com/mail/?view=cm&fs=1&to=fardeenkhan63574@gmail.com","_blank")
             
@@ -131,7 +131,7 @@ useEffect(() => {
         }} />
         <img
         onClick={()=>setopen(prev=>({...prev,cli:{...prev.cli,window:!prev.cli.window}}))}
-        className='px-3 py-2 rounded-xl cli lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/public/cli.svg" alt="" />
+        className='px-3 py-2 rounded-xl cli lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/cli.svg" alt="" />
   
 
       </footer>

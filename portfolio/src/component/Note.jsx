@@ -8,7 +8,7 @@ const Note = ({onfocus,zindex}) => {
 
 const [name, setname] = useState(null)
 useEffect(()=>{
-fetch("/public/note.txt").then((note)=>note.text()).then((data)=>setname(data))
+fetch("/note.txt").then((note)=>note.text()).then((data)=>setname(data))
 },[])
 
 
