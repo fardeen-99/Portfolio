@@ -1,7 +1,7 @@
 import React from 'react'
 import Macbook from './Macbook'
 import Terminal from 'react-console-emulator'
-const Cli = () => {
+const Cli = ({onfocus,zindex}) => {
 
 const commands = {
         about: {
@@ -101,7 +101,7 @@ Happy exploring! 🚀
 
   return (
 <>
-<Macbook posx={500} posy={200} aloo={"Terminal"} width={400}height={400}>
+<Macbook posx={500} posy={200} aloo={"Terminal"} width={400}height={400} onfocus={onfocus} zindex={zindex}>
     <section className='overflow-hidden  '>
 <Terminal 
 commands={commands}

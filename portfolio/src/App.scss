@@ -43,9 +43,15 @@ backdrop-filter: blur(20px);
     background: linear-gradient(to bottom, rgb(255, 65, 78), rgb(255, 25, 40));
 }
 
-.calen,
-.mail {
+.calen {
     background: linear-gradient(to bottom, rgb(105, 94, 255), rgb(66, 52, 255));
+}
+.mail{
+    
+    background: linear-gradient(
+  to bottom, rgb(201, 62, 97),rgb(167, 18, 55)
+);
+
 }
 
 .spot {
@@ -53,7 +59,7 @@ backdrop-filter: blur(20px);
 }
 
 .link {
-   background-color: #007EBB;
+   background: #007EBB;
 }
 @media (min-width: 768px) {
     
@@ -126,4 +132,11 @@ background-color: transparent !important;
 }
 .music{
      background: linear-gradient(to bottom,rgb(15, 61, 122), rgb(9, 31, 51));
+}
+
+@media (min-width:666px) {
+    footer{
+        width: max-content;
+    }
+    
 }

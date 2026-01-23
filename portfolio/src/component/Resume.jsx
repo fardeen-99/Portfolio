@@ -1,9 +1,9 @@
 import React from 'react'
 import Macbook from './Macbook'
 
-const Resume = () => {
+const Resume = ({onfocus,zindex}) => {
   return (
-<Macbook posy={100} posx={700} aloo={"PDF"}>
+<Macbook posy={100} posx={700} aloo={"PDF"} onfocus={onfocus} zindex={zindex}>
     <section className='h-full w-full pdf-frame '>
         <iframe src='/resume.pdf'  className='h-full w-full overflow-hidden ' />
     </section>
