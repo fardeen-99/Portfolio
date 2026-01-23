@@ -101,7 +101,7 @@ Happy exploring! 🚀
 
   return (
 <>
-<Macbook posx={500} posy={200} aloo={"Terminal"} width={400}height={400} onfocus={onfocus} zindex={zindex}>
+<Macbook posx={10} posy={50} aloo={"Terminal"} width={400}height={400} onfocus={onfocus} zindex={zindex}>
     <section className='overflow-hidden  '>
 <Terminal 
 commands={commands}
