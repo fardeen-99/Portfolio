@@ -32,7 +32,7 @@ hour12:true
     <>
       <nav className='flex justify-between  px-3 py-1 mac-dock text-white z-50 fixed  w-full'>
         <div className='flex gap-3 capitalize'>
-          <img src="/public/icons/apple.svg" alt="appe" />
+          <img src="/public/apple.svg" alt="appe" />
           <p className="text-sm " >fardeen khan</p>
           <p className="text-sm hidden md:block" >file</p>
           <p className="text-sm hidden md:block" >Window</p>
@@ -40,7 +40,7 @@ hour12:true
         </div>
 
         <div className='flex gap-2'>
-          <img src="/public/icons/wifi.svg" alt="wifi" />
+          <img src="/public/wifi.svg" alt="wifi" />
           <p className='text-sm capitalize'>{date.replace(/,/g, "")}</p>
         </div>
 
