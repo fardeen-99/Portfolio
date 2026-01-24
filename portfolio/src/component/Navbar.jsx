@@ -23,7 +23,6 @@ hour12:true
     let timeInterval = setInterval(getdate, 1000)
     return () => {
       clearInterval(timeInterval)
-
     }
   }, [])
 
@@ -33,7 +32,7 @@ hour12:true
       <nav className='flex justify-between  px-3 py-1 mac-dock text-white z-50 fixed  w-full'>
         <div className='flex gap-3 capitalize'>
           <img src="/apple.svg" alt="appe" />
-          <p className="text-sm " >fardeen khan</p>
+          <p className="text-sm" >fardeen khan</p>
           <p className="text-sm hidden md:block" >file</p>
           <p className="text-sm hidden md:block" >Window</p>
           <p className="text-sm hidden md:block" >Terminal</p>
@@ -45,6 +44,7 @@ hour12:true
         </div>
 
 
+        
       </nav>
     </>
   )
