@@ -110,7 +110,7 @@ backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.125);
     /* Soft shadow */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    z-index: 999;
+   
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -139,4 +139,21 @@ background-color: transparent !important;
         width: max-content;
     }
     
+}
+.phover{
+    padding-inline: 7px;
+    gap:0;
+    cursor:pointer;
+    &:active{
+        scale: 0.95;
+    }
+    
+}
+.phover:hover{
+    border-radius: 6px;
+backdrop-filter: blur(10px);
+}
+.pdf-frame {
+  height: 100%;
+  width: 100%;
 }

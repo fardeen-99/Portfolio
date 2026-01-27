@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import "./App.scss"
 import Footer from "./component/Footer"
 import Github from "./component/Github"
@@ -9,61 +9,81 @@ import Spotify from "./component/Spotify"
 import Cli from "./component/Cli"
 import Calender from "./component/Calender"
 import Mobile from "./component/Mobile"
+import Lottie from "./component/Lottie"
+import FaceID from "./component/FaceID"
+import Screen from "./component/Screen"
+import { Context } from "./Context"
 
 const App=()=>{
-const [open, setopen] = useState({
-  github:{window:false,z:1},
-  notes:{window:false,z:1},
-  pdf:{window:false,z:1},
-  calender:{window:false,z:1},
-  spotify:{window:false,z:1},
-  mail:{window:false,z:1},
-  linkdln:{window:false,z:1},
-  cli:{window:false,z:1},
-})
 
 
 
-const [zindex, setzindex] = useState(10)
 
-const focuswindow=(key)=>{
-setzindex(prev=>prev+1)
+const{open,setopen,zindex,focuswindow}=useContext(Context)
+
+const[phase,setphase]=useState("phase1")
 
 
-setopen((prev)=>(
-  {...prev,[key]:{window:true,z:zindex+1}}
-))
+useEffect(()=>{
+  let timer;
+if(phase==="phase1"){
 
+  timer= setTimeout(() => {
+    setphase("phase2")
+  }, 4000);
 }
-
-console.log(open.github);
-
+if(phase==="phase2"){
+   timer=setTimeout(() => {
+    setphase("app")
+  }, 2000);
+}
+return()=>{
+  clearTimeout(timer)
+}
+},[phase])
 
   return(
     <>
     <main  >
 
+
+<Screen show={phase==="phase1"}>
+    <Lottie/>
+</Screen>
+
+<Screen show={phase==="phase2"}>
+  <FaceID/>
+</Screen>
+
+{phase==="app" && ( <div>
+
+
       <video src="/cat.mp4" className=" fixed h-full w-full inset-0 object-fill   " muted autoPlay loop></video>
       <div className="md:hidden">
       <video src="/k2.mp4" className=" fixed h-full w-full inset-0  object-fill " muted autoPlay loop></video>
       </div>
-   <Navbar/>
-   <Footer setopen={setopen} open={open} />
+   <Navbar open={open} setopen={setopen}/>
+   <Footer setopen={setopen} open={setopen} />
+
    <div className="hidden md:block" >
 
-{open.github.window && <Github  zindex={open.github.z} onfocus={()=>focuswindow("github")} />}
+{open.github.window && <Github  zindex={open.github.z} onfocus={()=>focuswindow("github")}  />}
 {open.notes.window && <Note zindex={open.notes.z} onfocus={()=>focuswindow("notes")} />}
    {open.pdf.window && <Resume zindex={open.pdf.z} onfocus={()=>focuswindow("pdf")} /> }
-   {open.spotify.window && <Spotify zindex={open.spotify.z} onfocus={()=>focuswindow("spotify")} />}
-   {open.cli.window && <Cli zindex={open.cli.z} onfocus={()=>focuswindow("cli")} />
+   {open.spotify.window && <Spotify zindex={open.spotify.z}   />}
+   {open.cli.window && <Cli zindex={open.cli.z}  />
   }
-{open.calender.window && <Calender zindex={open.calender.z} onfocus={()=>focuswindow("calender")} />
+{open.calender.window && <Calender zindex={open.calender.z}  />
 }
 
 </div>
 <div className=" md:hidden">
  <Mobile />
 </div>
+
+
+</div>
+)}
     </main>
     </>
   )

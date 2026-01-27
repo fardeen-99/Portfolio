@@ -55,7 +55,7 @@ const Github = ({onfocus,zindex}) => {
   return (
     <>
 
-<Macbook aloo={"khan"} posx={100}posy={200} onfocus={onfocus} zindex={zindex} >
+<Macbook aloo={"Github"} app={"github"} posx={100}posy={200} onfocus={onfocus} zindex={zindex}  >
    <div className=" grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 m-6">
             {git.map((ele) => (
               <section

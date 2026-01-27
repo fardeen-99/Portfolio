@@ -1,6 +1,8 @@
 import React from 'react'
 import Macbook from './Macbook'
 import Terminal from 'react-console-emulator'
+import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark'
+import { coldarkCold } from 'react-syntax-highlighter/dist/esm/styles/prism'
 const Cli = ({onfocus,zindex}) => {
 
 const commands = {
@@ -49,7 +51,8 @@ Projects
             usage: 'contact',
             fn: () => `Email: fardeenkhan63574@gmail.com
 Phone: +91-9810011454
-Location: Laxmi Nagar Delhi-110092`
+Location: Laxmi Nagar Delhi-110092`,
+
         },
         github: {
             description: 'Open GitHub profile',
@@ -101,12 +104,11 @@ Happy exploring! 🚀
 
   return (
 <>
-<Macbook posx={400} posy={50} aloo={"Terminal"} width={400}height={400} onfocus={onfocus} zindex={zindex}>
+<Macbook posx={400} app={"cli"}  posy={50} aloo={"Terminal"} width={400}height={400} onfocus={onfocus} zindex={zindex}>
     <section className='overflow-hidden  '>
 <Terminal 
-commands={commands}
+commands= {commands}
 welcomeMessage={welcomeMessage}
-
 promptLabel={'Fardeen:~$'}
 promptLabelStyle={{ color:"green" }} 
 />

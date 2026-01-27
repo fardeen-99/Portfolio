@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-const Navbar = () => {
+const Navbar = ({open,setopen}) => {
 
   const [date, setdate] = useState("")
   const getdate = () => {
@@ -29,13 +29,21 @@ hour12:true
 
   return (
     <>
-      <nav className='flex justify-between  px-3 py-1 mac-dock text-white z-50 fixed  w-full'>
-        <div className='flex gap-3 capitalize'>
+      <nav className='flex justify-between  px-3 py-1 mac-dock text-white  fixed  w-full'>
+        <div className='flex  capitalize'>
           <img src="/apple.svg" alt="appe" />
-          <p className="text-sm" >fardeen khan</p>
-          <p className="text-sm hidden md:block" >file</p>
-          <p className="text-sm hidden md:block" >Window</p>
-          <p className="text-sm hidden md:block" >Terminal</p>
+          <p className="text-sm px-2 " >fardeen khan</p>
+          <p className="text-sm hidden md:block phover" >file</p>
+          <p className="text-sm hidden md:block phover" >Window</p>
+          <p className="text-sm hidden md:block phover"
+          
+          onClick={()=>{
+
+     setopen((prev)=>({...prev,cli:{...prev.cli,window:!prev.cli.window}}))
+
+          }}
+          
+          >Terminal</p>
         </div>
 
         <div className='flex gap-2'>

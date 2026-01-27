@@ -3,7 +3,7 @@ import Macbook from './Macbook'
 
 const Calender = ({onfocus,zindex}) => {
   return (
-  <Macbook height={350} width={350} posx={800} posy={200} aloo={"calender"} onfocus={onfocus} zindex={zindex}>
+  <Macbook app={"calender"} height={350} width={350} posx={800} posy={200} aloo={"calender"} onfocus={onfocus} zindex={zindex}>
     <section className='h-full'>
         <iframe
   src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=Asia%2FKolkata"
