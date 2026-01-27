@@ -35,7 +35,7 @@ if(phase==="phase1"){
 if(phase==="phase2"){
    timer=setTimeout(() => {
     setphase("app")
-  }, 2000);
+  }, 2400);
 }
 return()=>{
   clearTimeout(timer)
