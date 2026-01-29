@@ -13,11 +13,12 @@ import Lottie from "./component/Lottie"
 import FaceID from "./component/FaceID"
 import Screen from "./component/Screen"
 import { Context } from "./Context"
+import Gallery from "./component/Gallery"
 
 const App=()=>{
 
 
-
+  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/cat.mp4")
 
 const{open,setopen,zindex,focuswindow}=useContext(Context)
 
@@ -35,7 +36,7 @@ if(phase==="phase1"){
 if(phase==="phase2"){
    timer=setTimeout(() => {
     setphase("app")
-  }, 2400);
+  }, 2000);
 }
 return()=>{
   clearTimeout(timer)
@@ -58,7 +59,7 @@ return()=>{
 {phase==="app" && ( <div>
 
 
-      <video src="/cat.mp4" className=" fixed h-full w-full inset-0 object-fill   " muted autoPlay loop></video>
+      <video src={active} className=" fixed h-full w-full inset-0 object-fill   " muted autoPlay loop></video>
       <div className="md:hidden">
       <video src="/k2.mp4" className=" fixed h-full w-full inset-0  object-fill " muted autoPlay loop></video>
       </div>
@@ -70,12 +71,12 @@ return()=>{
 {open.github.window && <Github  zindex={open.github.z} onfocus={()=>focuswindow("github")}  />}
 {open.notes.window && <Note zindex={open.notes.z} onfocus={()=>focuswindow("notes")} />}
    {open.pdf.window && <Resume zindex={open.pdf.z} onfocus={()=>focuswindow("pdf")} /> }
-   {open.spotify.window && <Spotify zindex={open.spotify.z}   />}
-   {open.cli.window && <Cli zindex={open.cli.z}  />
+   {open.spotify.window && <Spotify zindex={open.spotify.z}  onfocus={()=>focuswindow("spotify")} />}
+   {open.cli.window && <Cli zindex={open.cli.z} onfocus={()=>focuswindow("cli")} />
   }
-{open.calender.window && <Calender zindex={open.calender.z}  />
+{open.calender.window && <Calender zindex={open.calender.z} onfocus={()=>focuswindow("calender")} />
 }
-
+{open.gallery.window && <Gallery zindex={open.gallery.z} onfocus={()=>focuswindow("gallery")} setactive={setactive}/>}
 </div>
 <div className=" md:hidden">
  <Mobile />

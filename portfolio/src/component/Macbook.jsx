@@ -39,25 +39,28 @@ setpos(pos)
 }}
 disableDragging={full}
 enableResizing={!full}
-  style={{zIndex:zindex}}
+  style={{zIndex:full?999:zindex}}
   onMouseDown={onfocus}
   onDragStart={onfocus}
     minWidth={250}
   minHeight={300}
   >
-             <div className="bg-black rounded-xl w-full h-full flex flex-col overflow-hidden">
+             <div className="bg-black rounded-xl w-full h-full flex flex-col overflow-hidden border-1 border-zinc-700">
 
         {/* Title bar */}
         <nav className="flex items-center gap-1 px-4 py-2 border-b cursor-pointer border-zinc-800">
-          <span className="h-3 w-3 rounded-full cursor-pointer bg-red-500" 
+          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-red-500" 
           onClick={()=>{
             setopen(prev=>({...prev,[app]:{...prev[app],window:false}}))
           }}
           
           />
-          <span className="h-3 w-3 rounded-full cursor-pointer bg-yellow-400"
+          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-yellow-400"
+
+onClick={()=>setopen((prev)=>({...prev,[app]:{...prev[app],window:false}}))}
+
           />
-          <span className="h-3 w-3 rounded-full cursor-pointer bg-green-500"
+          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-green-500"
                     onClick={()=>setfull(!full)}
 
           />

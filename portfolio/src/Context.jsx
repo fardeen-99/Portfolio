@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 
 
@@ -16,20 +16,28 @@ const [open, setopen] = useState({
   mail:{window:false,z:1},
   linkdln:{window:false,z:1},
   cli:{window:false,z:1},
+  gallery:{window:false,z:1}
 })
 
 
 
 const [zindex, setzindex] = useState(10)
 
-const focuswindow=(key)=>{
-setzindex(prev=>prev+1)
+const focuswindow = (key) => {
+  setzindex(prevZ => {
+    const newZ = prevZ + 1
 
+    setopen(prev => ({
+      ...prev,
+      [key]: {
+        ...prev[key],
+        window: true,
+        z: newZ
+      }
+    }))
 
-setopen((prev)=>(
-  {...prev,[key]:{window:true,z:zindex+1}}
-))
-
+    return newZ
+  })
 }
 
 
