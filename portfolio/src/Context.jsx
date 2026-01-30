@@ -39,10 +39,10 @@ const focuswindow = (key) => {
     return newZ
   })
 }
-
+const[player,setplayer]=useState(false)
 
     return (
-<Context.Provider value={{open,setopen,focuswindow,zindex}}>
+<Context.Provider value={{open,setopen,focuswindow,zindex,setplayer,player}}>
     {children}
 </Context.Provider>
 

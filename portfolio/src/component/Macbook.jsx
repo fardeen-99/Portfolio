@@ -1,5 +1,5 @@
 
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import {Rnd} from "react-rnd"
 import { Context } from "../Context"
 
@@ -10,6 +10,14 @@ const Macbook = ({children,aloo,posx,posy,width=300,height=300,zindex=1,onfocus,
   const [full, setfull] = useState(false)
   const [pos, setpos] = useState({x:posx,y:posy})
   const [size, setsize] = useState({height,width})
+
+
+  const [mounted, setMounted] = useState(false)
+
+useEffect(() => {
+  setMounted(true)
+}, [])
+
   return (
     <>
     
@@ -39,7 +47,17 @@ setpos(pos)
 }}
 disableDragging={full}
 enableResizing={!full}
-  style={{zIndex:full?999:zindex}}
+ style={{
+  zIndex: full ? 999 : zindex,
+  transition: "opacity 0.25s ease",
+  transform: mounted
+    ? full
+      ? "scale(1)"
+      : "scale(1)"
+    : "scale(0.85)",
+  opacity: mounted ? 1 : 0,
+}}
+
   onMouseDown={onfocus}
   onDragStart={onfocus}
     minWidth={250}

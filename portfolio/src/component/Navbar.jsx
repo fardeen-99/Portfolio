@@ -26,6 +26,17 @@ hour12:true
     }
   }, [])
 
+const [fullscreen, setFullscreen] = useState(false)
+
+const toggleFullscreen = () => {
+  setFullscreen(prev => !prev)
+  const ele=document.documentElement
+  if(fullscreen){
+    ele.requestFullscreen()
+  }else{
+    document.exitFullscreen()
+  }
+}
 
   return (
     <>
@@ -47,6 +58,12 @@ hour12:true
         </div>
 
         <div className='flex gap-2'>
+          <i
+  onClick={toggleFullscreen}
+  className={`${
+    fullscreen ? "ri-fullscreen-line" : "ri-fullscreen-exit-line"  
+  } cursor-pointer text-sm transition-transform duration-200 active:scale-90 hover:scale-110`}
+/>
           <img src="/wifi.svg" alt="wifi" />
           <p className='text-sm capitalize'>{date.replace(/,/g, "")}</p>
         </div>

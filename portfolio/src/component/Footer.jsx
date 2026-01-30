@@ -1,15 +1,16 @@
-import { memo, useEffect, useRef, useState } from "react"
+import { memo, useContext, useEffect, useRef, useState } from "react"
 import { FaPlay } from "react-icons/fa";
 
 import { IoMdPause } from "react-icons/io";
 import Textpopup from "./Textpopup";
+import { Context } from "../Context";
 
 
 const Footer = ({setopen,open}) => {
 const[auto,setauto]=useState(false)
   const refu=useRef()
 
-
+  const{player,setplayer}=useContext(Context)
   
   const setting=()=>{
    setauto(prev=>{
@@ -23,13 +24,15 @@ const[auto,setauto]=useState(false)
     }
    })
   }
-
+const chalega=()=>{
+  setplayer((prev)=>!prev)
+}
   useEffect(()=>{
 const chalao=(e)=>{
   if(e.code==="Space"){
   e.preventDefault()
   
-  setting()
+  chalega()
   console.log(e);
 }
 
@@ -48,16 +51,18 @@ useEffect(() => {
 
     if (document.hidden) {
       // remember state
-      wasPlayingRef.current = !refu.current.paused
+      // wasPlayingRef.current = !refu.current.paused
 
-      refu.current.pause()
-      setauto(false)
-    } else {
-      // resume ONLY if it was playing before
-      if (wasPlayingRef.current) {
-        refu.current.play()
-        setauto(true)
-      }
+      // refu.current.pause()
+      // setauto(false)
+      setplayer(false)
+    // } else {
+    //   // resume ONLY if it was playing before
+    //   if (!player) {
+    //     // refu.current.play()
+    //     // setauto(true)
+    //     setplayer(true)
+    //   }
     }
   }
 
@@ -73,11 +78,21 @@ useEffect(() => {
 
 
   
+  //   const goFullscreen = () => {
+  //   const elem = document.documentElement; // poora page
+  
+  //   if (elem.requestFullscreen) {
+  //     elem.requestFullscreen();
+  //   }
+  // };
+
   return (
     <>
-    <audio src="/audio.mp4" ref={refu} loop></audio>
+    {/* <audio src="/audio.mp4" ref={refu} loop></audio> */}
       <footer className='mac-dock flex gap-2 z-50  absolute bottom-5 left-[50%] transform translate-x-[-50%] px-2 sm:px-4 py-1 rounded-xl  w-[90%] overflow-x-auto sm:overflow-x-visible  no-scrollbar' >
-        
+        {/* <button onClick={goFullscreen} >
+  Full Screen
+</button> */}
 <Textpopup text={"Github"}>
 
         <img className='px-3 py-2 rounded-xl git lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon relative' src="/github.svg" alt=""
@@ -98,12 +113,12 @@ useEffect(() => {
 <Textpopup text={"Music"}>
         <div
 
-        onClick={setting}
+        onClick={chalega}
         className="px-5 py-3 md:px-4 rounded-xl cli lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon text-amber-50 music"
         >
           <div className="hidden md:block">
 
-          {auto ?<img src="https://img.icons8.com/?size=30&id=xErxpbkwhtZv&format=png" alt="" /> : <img src="https://img.icons8.com/?size=30&id=6ttPxGphzG67&format=png" alt="" />  }
+          {player ?<img src="https://img.icons8.com/?size=30&id=xErxpbkwhtZv&format=png" alt="" /> : <img src="https://img.icons8.com/?size=30&id=6ttPxGphzG67&format=png" alt="" />  }
           </div>
 
           <div className="md:hidden mt-1.5">
