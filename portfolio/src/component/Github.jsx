@@ -8,48 +8,48 @@ const Github = ({onfocus,zindex}) => {
     const git=[
   {
     "id": 1,
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000",
-    "title": "Scheds - A Course Schedule Generator",
-    "description": "My proudest project yet, a comprehensive course schedule generator application built with ASP.NET Core MVC.",
-    "tags": ["ASP.NET Core", "C#", "Entity Framework", "SQL Server", "Bootstrap", "jQuery"],
-    "repoLink": "https://github.com/microsoft/dotnet",
-    "demoLink": "https://dotnet.microsoft.com/"
+    "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2024/12/ai-artificial-intelligence-machine-learning-research-privacy-ethics-development-1024x714.jpg",
+    "title": "SmartGPT Conversational AI-Designed by fardeen",
+    "description": "This project was built to understand and demonstrate how modern conversational AI systems work end-to-end, from user interaction to AI response generation.",
+    "tags": ["Advance React", "Axios", "Tailwind", "SCSS", "Rest API", "HTML"],
+    "repoLink": "https://github.com/fardeen-99/react-journey/tree/main/react-gpt",
+    "demoLink": "https://fardeen-chatgpt.vercel.app/"
   },
   {
     "id": 2,
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
-    "title": "FinTrack - Personal Finance Dashboard",
-    "description": "A real-time finance tracker that visualizes spending habits using interactive charts and connects to banking APIs.",
-    "tags": ["React", "TypeScript", "Chart.js", "Node.js", "Express", "MongoDB"],
-    "repoLink": "https://github.com/facebook/react",
+    "title": "FinTrack - Personal Mutitasking Dashboard",
+    "description": "A modern multitasking dashboard that brings multiple tools and widgets into one unified interface, enabling users to manage tasks, and productivity seamlessly. Built with a focus on performance, smooth interactions, and intuitive UI/UX.",
+    "tags": ["React", "JavaScript", "Tailwind", "HTML", "Axios", "CSS"],
+    "repoLink": "https://github.com/fardeen-99/shaeriyans-cohort-2.0/tree/main/Dashboard-advanced",
     "demoLink": "https://react.dev/"
   },
   {
     "id": 3,
-    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1000",
-    "title": "SecureAuth - Backend Identity Service",
-    "description": "A robust backend authentication microservice featuring JWT implementation, role-based access control, and OAuth2 integration.",
-    "tags": ["Python", "Django", "PostgreSQL", "Docker", "Redis", "JWT"],
-    "repoLink": "https://github.com/django/django",
-    "demoLink": null
+    "image": "https://img.freepik.com/premium-photo/clouds-symbolizing-travel-adventure-imaginative-exploration-diverse-global-destinations_1293074-200969.jpg",
+    "title": "WorldAtlas - global Atlas Platform",
+    "description": "An interactive World Atlas application that allows users to explore countries, continents, and geographic data through a clean and intuitive interface. Designed for quick discovery, learning, and easy navigation across global information.",
+    "tags": ["React", "TanStack Query", "Axios", "Css", "Vite", "HTML"],
+    "repoLink": "https://github.com/fardeen-99/react-journey/tree/main/reactfinal",
+    "demoLink": "https://fardeen-atlas.vercel.app/  "
   },
   {
     "id": 4,
-    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
-    "title": "ChatStream - Real-time Messaging App",
+    "image": "https://ecole-intuit-lab.co.in/wp-content/uploads/fly-images/24689/img-3-730x450-c.jpeg",
+    "title": "MultiMedia - Real-time Media searching App",
     "description": "A lightweight chat application allowing users to create rooms and message instantly. Optimized for low latency communication.",
     "tags": ["Vue.js", "Firebase", "Tailwind CSS", "Socket.io"],
-    "repoLink": "https://github.com/vuejs/core",
-    "demoLink": "https://vuejs.org/"
+    "repoLink": "https://github.com/fardeen-99/react-journey/tree/main/redux02final",
+    "demoLink": "https://mediahunt.vercel.app/"
   },
   {
     "id": 5,
-    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
-    "title": "TerminalX - CLI Productivity Tool",
-    "description": "A command-line interface tool built to automate repetitive developer tasks and manage local environments efficiently.",
-    "tags": ["Rust", "Clap", "Tokio", "System API"],
-    "repoLink": "https://github.com/rust-lang/rust",
-    "demoLink": null
+    "image": "https://damassets.autodesk.net/content/dam/autodesk/draftr/19187/manufacturing-treau-5758.jpg",
+    "title": "TopCircuit - A Complete PCB Solution",
+    "description": "Developed a PCB manufacturing website showcasing design, fabrication, and assembly services with a clean, responsive UI. Implemented structured sections to highlight products, processes, and quality standards for improved user clarity.",
+    "tags": ["HTML", "CSS", "JavaScript", "UI/UX"],
+    "repoLink": "https://github.com/fardeen-99/top-circuits",
+    "demoLink": "https://top-circuits.vercel.app/"
   }
 ]
   return (

@@ -14,6 +14,7 @@ import FaceID from "./component/FaceID"
 import Screen from "./component/Screen"
 import { Context } from "./Context"
 import Gallery from "./component/Gallery"
+import Calculator from "./component/Calculator"
 
 const App=()=>{
 
@@ -89,6 +90,7 @@ return()=>{
 {open.calender.window && <Calender zindex={open.calender.z} onfocus={()=>focuswindow("calender")} />
 }
 {open.gallery.window && <Gallery zindex={open.gallery.z} onfocus={()=>focuswindow("gallery")} setactive={setactive}/>}
+  {open.calculator.window && <Calculator zindex={open.calculator.z} onfocus={()=>focuswindow("calculator")} />}
 </div>
 <div className=" md:hidden">
  <Mobile />

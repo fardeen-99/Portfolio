@@ -5,9 +5,9 @@ import { Context } from "../Context"
 
 const Macbook = ({children,aloo,posx,posy,width=300,height=300,zindex=1,onfocus,app}) => {
 
- const{setopen}=useContext(Context)
+ const{setopen,full,setfull}=useContext(Context)
   
-  const [full, setfull] = useState(false)
+
   const [pos, setpos] = useState({x:posx,y:posy})
   const [size, setsize] = useState({height,width})
 
@@ -63,10 +63,10 @@ enableResizing={!full}
     minWidth={250}
   minHeight={300}
   >
-             <div className="bg-black rounded-xl w-full h-full flex flex-col overflow-hidden border-1 border-zinc-700">
+             <div className="bg-black rounded-xl w-full h-full flex flex-col overflow-hidden ">
 
         {/* Title bar */}
-        <nav className="flex items-center gap-1 px-4 py-2 border-b cursor-pointer border-zinc-800">
+        <nav className="flex items-center gap-1 px-4 py-2 border-b cursor-grab border-zinc-800">
           <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-red-500" 
           onClick={()=>{
             setopen(prev=>({...prev,[app]:{...prev[app],window:false}}))
@@ -88,7 +88,7 @@ onClick={()=>setopen((prev)=>({...prev,[app]:{...prev[app],window:false}}))}
         </nav>
 
         {/* Content */}
-        <div className="flex-1 w-full overflow-y-auto ">
+        <div className="flex-1 w-full overflow-y-auto cursor-pointer ">
 
 {children}
               

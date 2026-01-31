@@ -47,10 +47,12 @@ useEffect(()=>{
             onMouseEnter={(e) => {
               e.currentTarget.currentTime = 0;
               e.currentTarget.play();
+              setplayer(false)
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.pause();
-              e.currentTarget.currentTime = 0;
+                e.currentTarget.pause();
+                e.currentTarget.currentTime = 0;
+                       
             }}
 
             ></video>

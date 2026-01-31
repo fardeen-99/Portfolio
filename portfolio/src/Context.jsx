@@ -16,7 +16,8 @@ const [open, setopen] = useState({
   mail:{window:false,z:1},
   linkdln:{window:false,z:1},
   cli:{window:false,z:1},
-  gallery:{window:false,z:1}
+  gallery:{window:false,z:1},
+  calculator:{window:false,z:1}
 })
 
 
@@ -40,9 +41,9 @@ const focuswindow = (key) => {
   })
 }
 const[player,setplayer]=useState(false)
-
+  const [full, setfull] = useState(false)
     return (
-<Context.Provider value={{open,setopen,focuswindow,zindex,setplayer,player}}>
+<Context.Provider value={{open,setopen,focuswindow,zindex,setplayer,player,full,setfull}}>
     {children}
 </Context.Provider>
 

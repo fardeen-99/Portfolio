@@ -179,7 +179,14 @@ onClick={()=>setopen(prev=>({...prev,gallery:{...prev.gallery,window:!prev.galle
 className="h-13 bg-stone-200 rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] transition-transform duration-200 icon" alt="" />
 
 </Textpopup>
+<Textpopup text={"Calculator"}>
+  <img src="https://cdn.jim-nielsen.com/macos/512/calculator-2025-11-13.png?rf=1024" alt=""
+  onClick={()=>setopen(prev=>({...prev,calculator:{...prev.calculator,window:!prev.calculator.window}}))}
+  className="h-13 bg-[#dad0d0] rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] transition-transform duration-200 icon" 
 
+  />
+  
+</Textpopup>
       </footer>
     </>
   )
