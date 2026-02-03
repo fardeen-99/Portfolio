@@ -10,7 +10,7 @@ const Footer = ({setopen,open}) => {
 const[auto,setauto]=useState(false)
   const refu=useRef()
 
-  const{player,setplayer}=useContext(Context)
+  const{player,setplayer,defaulter,setzindex}=useContext(Context)
   
   const setting=()=>{
    setauto(prev=>{
@@ -157,7 +157,12 @@ useEffect(() => {
                         onClick={()=>setopen(prev=>({...prev,spotify:{...prev.spotify,window:!prev.spotify.window}}))}
         className='px-3 py-[9px] rounded-xl spot lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/spotify.svg" alt="" />
 </Textpopup>
+<Textpopup text={"Google"}>
+<img src="https://www.google.com/favicon.ico" 
+onClick={()=>setopen(prev=>({...prev,google:{...prev.google,window:!prev.google.window,full:true}}))}
+className=" bg-white p-1 h-13 rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] transition-transform duration-200 icon" alt="" />
 
+</Textpopup>
 <Textpopup text={"Mail"}>
         <img
          className='px-2.5 py-[7px] rounded-xl mail lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/mail.svg" alt=""
@@ -169,7 +174,7 @@ useEffect(() => {
 </Textpopup>
 <Textpopup text={"Maps"}>
   <img src="https://img.icons8.com/?size=60&id=wMWhDma1XrM8&format=png" alt=""
-  onClick={()=>setopen(prev=>({...prev,calculator:{...prev.calculator,window:!prev.calculator.window}}))}
+  onClick={()=>setopen(prev=>({...prev,map:{...prev.map,window:!prev.map.window}}))}
   className="  rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] transition-transform duration-200 icon" 
 
   />
@@ -190,11 +195,31 @@ useEffect(() => {
 
 <Textpopup text={"Gallery"}>
 <img src="/gallery.png" 
-onClick={()=>setopen(prev=>({...prev,gallery:{...prev.gallery,window:!prev.gallery.window}}))}
+onClick={()=>{
+  setopen(prev=>({...prev,gallery:{...prev.gallery,window:!prev.gallery.window,z:20}}))
+
+}
+}
+
 className="h-13 bg-stone-200 rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] transition-transform duration-200 icon" alt="" />
 
 </Textpopup>
 
+<Textpopup text={"Bin"}>
+  <img src="https://files.softicons.com/download/system-icons/iwindows-icons-by-wallec/png/128x128/Recycle%20Bin.png" 
+// onClick={() =>
+//   setopen(prev =>
+//     Object.fromEntries(  // ye key value pair ka array bnata hai //.keys() --> sri keys lekr unka aaray bnadeta hai
+//       Object.keys(prev).map(key => [key, { ...prev[key], window: false }])
+//     )
+//   )
+// }
+onClick={()=>setopen(defaulter)}
+
+className="p-2 h-13 bin rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] transition-transform duration-200 icon" alt="" />
+
+
+</Textpopup>
 
       </footer>
     </>

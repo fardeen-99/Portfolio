@@ -4,7 +4,7 @@ import Calc from './Calc'
 
 const Calculator = ({onfocus,zindex}) => {
   return (
-    <Macbook posx={550} height={450} width={320} posy={70} onfocus={onfocus} zindex={zindex} app={"calculator"} aloo={"Calcultor"}>
+    <Macbook posx={550} height={450} width={320} posy={70} onfocus={onfocus} zindex={zindex} app={"calculator"} aloo={"Calculator"}>
         <section className='h-full w-full cursor-pointer '>
 <Calc/>
 

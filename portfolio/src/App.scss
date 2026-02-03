@@ -56,7 +56,9 @@ backdrop-filter: blur(20px);
 .spot {
     background: linear-gradient(to bottom, rgb(78, 176, 33), rgb(53, 142, 12));
 }
-
+.bin{
+background: linear-gradient(135deg ,rgba(255, 255, 255, 0.192),rgba(245, 222, 179, 0.349),rgba(255, 255, 255, 0.233));
+}
 .link {
    background: #007EBB;
 }
@@ -160,4 +162,11 @@ backdrop-filter: blur(10px);
 
   border-radius: 18px;
   padding: 10px;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

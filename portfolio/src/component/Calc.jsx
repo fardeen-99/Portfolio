@@ -79,7 +79,7 @@ const styles = {
 
 const Calc = () => {
   const [value, setValue] = useState("");
-const{full}=useContext(Context)
+const{open}=useContext(Context)
 
   const handleClick = (btn) => {
     if (btn === "C") return setValue("");
@@ -112,7 +112,7 @@ const{full}=useContext(Context)
             <button
               key={i}
               onClick={() => handleClick(btn)}
-              className={`${full?"rounded-4xl":"rounded-full"}`}
+              className={`${open.calculator.full?"rounded-4xl":"rounded-full"} active:scale-95 `}
               style={{
                 ...styles.button,
                 ...(btn === "=" && styles.equal),

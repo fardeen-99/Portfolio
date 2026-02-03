@@ -5,7 +5,7 @@ import { Context } from "../Context"
 
 const Macbook = ({children,aloo,posx,posy,width=300,height=300,zindex=1,onfocus,app}) => {
 
- const{setopen,full,setfull}=useContext(Context)
+ const{setopen,open}=useContext(Context)
   
 
   const [pos, setpos] = useState({x:posx,y:posy})
@@ -31,8 +31,8 @@ useEffect(() => {
 
     
   // }}
-  size={full?{height:"100vh",width:"100vw"}:size}
-  position={full?{x:0,y:0}:pos}
+  size={open[app].full?{height:"100vh",width:"100vw"}:size}
+  position={open[app].full?{x:0,y:0}:pos}
   
 onDragStop={(e,d)=>{
  setpos( {x:d.x,y:d.y})  //if we dont use default jo ki boht easy hai tou humey apne hath mein matlb iss rnd package ko control krne ke liye yedragstop usekrna pdhta hai zaroori hai taki hum x,y nikal ske d ka mtlb direction hai dx-xdirection d.y mtlb y direction
@@ -45,13 +45,13 @@ setsize({height:ref.offsetHeight,
 })
 setpos(pos)
 }}
-disableDragging={full}
-enableResizing={!full}
+disableDragging={open[app].full}
+enableResizing={!open[app].full}
  style={{
-  zIndex: full ? 999 : zindex,
+  zIndex: open[app].full ? 999 : zindex,
   transition: "opacity 0.25s ease",
   transform: mounted
-    ? full
+    ? open[app].full
       ? "scale(1)"
       : "scale(1)"
     : "scale(0.85)",
@@ -78,9 +78,8 @@ enableResizing={!full}
 onClick={()=>setopen((prev)=>({...prev,[app]:{...prev[app],window:false}}))}
 
           />
-          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-green-500"
-                    onClick={()=>setfull(!full)}
-
+          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 hover:scale-115 bg-green-500"
+                                onClick={()=>setopen((prev)=>({...prev,[app]:{...prev[app],full:!prev[app].full}}))}
           />
           <p className="text-zinc-300 text-sm ml-2  text-[11px]">
             Fardeen Khan - <span className="uppercase text-[10px]"> {aloo} </span>

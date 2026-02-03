@@ -33,7 +33,7 @@ useEffect(()=>{
 
 
   return (
-    <Macbook posx={300} posy={200} width={500} onfocus={onfocus} zindex={zindex} aloo={"Live wallpaper"}                     app={"gallery"}>
+    <Macbook posx={680} posy={250} width={500} onfocus={onfocus} zindex={zindex} aloo={"Live wallpaper"}                     app={"gallery"}>
 <section className=' grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))]  gap-6 m-6'>
 {
     array.map((ele,index)=>{
@@ -52,7 +52,7 @@ useEffect(()=>{
             onMouseLeave={(e) => {
                 e.currentTarget.pause();
                 e.currentTarget.currentTime = 0;
-                       
+                       setplayer(true)
             }}
 
             ></video>

@@ -8,19 +8,35 @@ export const Contextprovider=({children})=>{
 
 
 const [open, setopen] = useState({
-  github:{window:false,z:1},
-  notes:{window:false,z:1},
-  pdf:{window:false,z:1},
-  calender:{window:false,z:1},
-  spotify:{window:false,z:1},
-  mail:{window:false,z:1},
-  linkdln:{window:false,z:1},
-  cli:{window:false,z:1},
-  gallery:{window:false,z:1},
-  calculator:{window:false,z:1}
+  github:{window:false,z:1,full:false},
+  notes:{window:false,z:1,full:false},
+  pdf:{window:false,z:1,full:false},
+  calender:{window:false,z:1,full:false},
+  spotify:{window:false,z:1,full:false},
+  mail:{window:false,z:1,full:false},
+  linkdln:{window:false,z:1,full:false},
+  cli:{window:false,z:1,full:false},
+  gallery:{window:false,z:1,full:false},
+  calculator:{window:false,z:1,full:false},
+  map:{window:false,z:1,full:false},
+  google:{window:false,z:1,full:true}
 })
 
+const defaulter = {
+  github:{window:false,z:1,full:false},
+  notes:{window:false,z:1,full:false},
+  pdf:{window:false,z:1,full:false},
+  calender:{window:false,z:1,full:false},
+  spotify:{window:false,z:1,full:false},
+  mail:{window:false,z:1,full:false},
+  linkdln:{window:false,z:1,full:false},
+  cli:{window:false,z:1,full:false},
+  gallery:{window:false,z:1,full:false},
+  calculator:{window:false,z:1,full:false},
+  map:{window:false,z:1,full:false},
+    google:{window:false,z:1,full:false}
 
+}
 
 const [zindex, setzindex] = useState(10)
 
@@ -41,9 +57,9 @@ const focuswindow = (key) => {
   })
 }
 const[player,setplayer]=useState(false)
-  const [full, setfull] = useState(false)
+
     return (
-<Context.Provider value={{open,setopen,focuswindow,zindex,setplayer,player,full,setfull}}>
+<Context.Provider value={{open,setopen,focuswindow,zindex,setplayer,player,defaulter}}>
     {children}
 </Context.Provider>
 

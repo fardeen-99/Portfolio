@@ -57,6 +57,8 @@ const toggleFullscreen = () => {
           >Terminal</p>
         </div>
 
+
+
         <div className='flex gap-2 items-center justify-center '>
               <div className='flex items-center justify-center gap-1 cursor-pointer active:scale-95' onClick={()=>alert("This Mac-OS is 100% Charged Just like your energy and hardwork")}>
            <img src="https://cdn.jim-nielsen.com/macos/512/fruitjuice-battery-health-2020-05-29.png?rf=1024" alt="" className='h-4'/>

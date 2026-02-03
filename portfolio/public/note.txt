@@ -2,7 +2,7 @@
      ENGINEERING PROFILE — FULL STACK
 ====================================================
 
-NAME        : Senior Full-Stack Engineer
+NAME        : Fardeen Full-Stack Engineer
 STATUS      : Open to Opportunities
 LOCATION    : Global / Remote
 FOCUS       : Performance • Scalability • UX Engineering
