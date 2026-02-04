@@ -17,34 +17,35 @@ import Gallery from "./component/Gallery"
 import Calculator from "./component/Calculator"
 import Maps from "./component/Maps"
 import Google from "./component/Google"
+import Search from "./component/Search"
 
 const App=()=>{
 
 
-  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/cat.mp4")
+  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/worldcup.mp4~")
 
-const{open,setopen,zindex,focuswindow,player,setplayer}=useContext(Context)
+const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
-const[phase,setphase]=useState("app")
+const[phase,setphase]=useState("phase1")
 
 
-// useEffect(()=>{
-//   let timer;
-// if(phase==="phase1"){
+useEffect(()=>{
+  let timer;
+if(phase==="phase1"){
 
-//   timer= setTimeout(() => {
-//     setphase("phase2")
-//   }, 4000);
-// }
-// if(phase==="phase2"){
-//    timer=setTimeout(() => {
-//     setphase("app")
-//   }, 2000);
-// }
-// return()=>{
-//   clearTimeout(timer)
-// }
-// },[phase])
+  timer= setTimeout(() => {
+    setphase("phase2")
+  }, 4000);
+}
+if(phase==="phase2"){
+   timer=setTimeout(() => {
+    setphase("app")
+  }, 2000);
+}
+return()=>{
+  clearTimeout(timer)
+}
+},[phase])
 
 
   const videoRef = useRef(null);
@@ -60,7 +61,16 @@ const[phase,setphase]=useState("app")
     <>
     <main className="relative" >
 
-<div className='flex gap-1.5 absolute top-13 w-7 hover:w-fit px-1.5 overflow-hidden right-20 transition-all  duration-200 ease-linear glass z-[999] text-white bg-transparent backdrop-blur-2xl hover:px-6  rounded-xl py-1 hover:py-1'>
+    <Search opening={opening} />
+  
+
+
+
+
+
+<div className='flex gap-1.5 absolute top-13 w-7 hover:w-fit px-1.5 overflow-hidden right-20 transition-all  duration-200 ease-linear glass z-[999] cursor-pointer text-white bg-transparent backdrop-blur-2xl hover:px-6  rounded-xl py-1 hover:py-1'
+onClick={()=>setopening(!opening)}
+>
     <i className="ri-search-line text-sm" />
   <p className='text-sm'>Search</p>
 </div>

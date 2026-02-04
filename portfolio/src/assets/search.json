@@ -1,0 +1,68 @@
+[{
+    "id": 1,
+    "name": "Mail",
+    "src": "https://cdn.jim-nielsen.com/macos/512/mail-2025-11-13.png?rf=1024"
+  },
+  
+  {
+    "id": 2,
+    "name": "Notes",
+    "src": "https://cdn.jim-nielsen.com/macos/512/notes-2025-11-13.png?rf=1024"
+  },
+  {
+    "id": 3,
+    "name": "PDF",
+    "src": "https://cdn.jim-nielsen.com/macos/512/pdf-squeezer-2014-12-03.png?rf=512"
+  },
+  {
+    "id": 4,
+    "name": "Calendar",
+    "src": "https://cdn.jim-nielsen.com/macos/512/calendar-2021-04-29.png?rf=1024"
+  },
+  {
+    "id": 5,
+    "name": "Calculator",
+    "src": "https://cdn.jim-nielsen.com/macos/512/calculator-2025-11-13.png?rf=1024"
+  },
+  {
+    "id": 6,
+    "name": "Spotify",
+    "src": "https://img.icons8.com/?size=94&id=YCUDjSzJ3Qgp&format=png"
+  },
+  {
+    "id": 7,
+    "name": "Google",
+    "src": "https://www.google.com/favicon.ico"
+  },
+  {
+    "id": 8,
+    "name": "Github",
+    "src": "https://img.icons8.com/?size=50&id=12599&format=png"
+  }
+  ,
+  {
+    "id": 9,
+    "name": "Maps",
+    "src": "https://img.icons8.com/?size=60&id=wMWhDma1XrM8&format=png"
+  },
+  {
+    "id": 10,
+    "name": "LinkedIn",
+    "src": "https://img.icons8.com/?size=48&id=13930&format=png"
+  },
+  {
+    "id": 11,
+    "name": "CLI",
+    "src": "https://cdn.jim-nielsen.com/macos/512/terminal-2021-06-03.png?rf=1024"
+  },
+  {
+    "id": 12,
+    "name": "Gallery",
+    "src": "https://cdn.jim-nielsen.com/macos/512/image-view-studio-gallery-2025-11-17.png?rf=1024"
+  },
+  {
+    "id": 13,
+    "name": "Bin",
+    "src": "https://files.softicons.com/download/system-icons/iwindows-icons-by-wallec/png/128x128/Recycle%20Bin.png"
+  }
+]
