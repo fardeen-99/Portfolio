@@ -22,7 +22,7 @@ import Search from "./component/Search"
 const App=()=>{
 
 
-  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/worldcup.mp4~")
+  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/worldcup.mp4")
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
