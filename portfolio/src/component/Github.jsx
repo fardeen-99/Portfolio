@@ -22,7 +22,7 @@ const Github = ({onfocus,zindex}) => {
     "description": "A modern multitasking dashboard that brings multiple tools and widgets into one unified interface, enabling users to manage tasks, and productivity seamlessly. Built with a focus on performance, smooth interactions, and intuitive UI/UX.",
     "tags": ["React", "JavaScript", "Tailwind", "HTML", "Axios", "CSS"],
     "repoLink": "https://github.com/fardeen-99/shaeriyans-cohort-2.0/tree/main/Dashboard-advanced",
-    "demoLink": "https://react.dev/"
+    "demoLink": "https://fardeen-dashboard.vercel.app/"
   },
   {
     "id": 3,

@@ -149,9 +149,9 @@ Commands:
   • social   - For connecting
   • github   - Repositories
   • clear   - Clear Terminal
+  Happy exploring!🤝🌻
+  `
 
-Happy exploring! 🚀
-`
 
 let refu=useRef(null)
 useEffect(() => {
@@ -173,6 +173,13 @@ commands= {commands}
 welcomeMessage={welcomeMessage}
 promptLabel={'Fardeen:~$'}
 promptLabelStyle={{ color:"green" }} 
+style={{
+    background: "black",
+   
+    fontSize: "14px",
+    lineHeight: "1.6"
+    ,color:"green"
+  }}
 
 />
 

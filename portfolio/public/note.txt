@@ -37,7 +37,7 @@ class ProfessionalHistory {
    * @period 2023 - Present 
    */
   public async TechFlow_Systems(): Promise<Impact> {
-    const role = "Senior Full-Stack Engineer";
+    const role = "Full-Stack Engineer";
     
     // Key Achievements
     const optimized = await api.optimize({ strategy: "Redis Caching" });
@@ -90,8 +90,8 @@ const trophyCabinet: HackathonWin[] = [
 // --------------------------------------------------
 
 const education = new Map<string, string>([
-  ["Stanford University", "MS Computer Science (3.9 GPA)"],
-  ["MIT World Peace Univ", "B.Tech Information Tech (8.8 CGPA)"]
+  ["St Lawrence Convent", "MS Computer Science (9.1 GPA)"],
+  ["Delhi Skills And Entrepreneur University", "BCA (8.8 CGPA)"]
 ]);
 
 export default new ProfessionalHistory();

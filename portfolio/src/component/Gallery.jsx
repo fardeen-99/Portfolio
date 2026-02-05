@@ -5,14 +5,15 @@ import { Context } from '../Context'
 const Gallery = ({setactive,onfocus,zindex}) => {
 
 
-    const array=["/bmw.mp4","/cat.mp4","/worldcup.mp4","/pinterest.mp4","/sbcfinal.mp4","virat.mp4","/camel.mp4","/car1.mp4","/marvel.mp4","/salman.mp4","/asthetic.mp4","/v2.mp4","/m2.mp4","/dhoni.mp4"]
+    const array=["/Jeena.mp4","/worldcup.mp4","/sm2.mp4","/m2trim.mp4","/sbcfinal.mp4","virat.mp4","/camel.mp4","/car1.mp4","/marvel.mp4","/pinterest.mp4","/asthetic.mp4","/v2.mp4","/cat.mp4","/dhoni.mp4"]
 
     const[save,setsave]=useState("")
     const{setopen,setplayer}=useContext(Context)
 
 const saver=(ele)=>{
     if(save!==ele){
-        setsave(ele)
+        localStorage.setItem("videosave",JSON.stringify(ele)) 
+        // setsave(ele)
         setactive(ele)
 
     }
@@ -24,12 +25,11 @@ const saver=(ele)=>{
    
 }
 
-useEffect(()=>{
-    console.log(save);
+// useEffect(()=>{
+//     console.log(save);
     
- localStorage.setItem("videosave",JSON.stringify(save)) 
 
-},[save])
+// },[save])
 
 
   return (
@@ -40,7 +40,7 @@ useEffect(()=>{
         return(
           
 
-            <video  src={ele} key={index}  loop  className='rounded-xl cursor-pointer z-[999] active:scale-95 hover:border-2 border-dotted border-white transform hover:scale-110 transition duration-200 ease-in' onClick={()=>saver(ele)
+            <video  src={ele} key={index}  loop  className='rounded-xl cursor-pointer z-[999] active:scale-95 hover:border-2 border-dotted border-white transform hover:scale-110 transition duration-200 ease-in ' onClick={()=>saver(ele)
 
 
             }

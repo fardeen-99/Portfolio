@@ -19,6 +19,8 @@ import Maps from "./component/Maps"
 import Google from "./component/Google"
 import Search from "./component/Search"
 
+import Folder from "./component/Folder"
+
 const App=()=>{
 
 
@@ -26,26 +28,26 @@ const App=()=>{
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
-const[phase,setphase]=useState("phase1")
+const[phase,setphase]=useState("app")
 
 
-useEffect(()=>{
-  let timer;
-if(phase==="phase1"){
+// useEffect(()=>{
+//   let timer;
+// if(phase==="phase1"){
 
-  timer= setTimeout(() => {
-    setphase("phase2")
-  }, 4000);
-}
-if(phase==="phase2"){
-   timer=setTimeout(() => {
-    setphase("app")
-  }, 2000);
-}
-return()=>{
-  clearTimeout(timer)
-}
-},[phase])
+//   timer= setTimeout(() => {
+//     setphase("phase2")
+//   }, 4000);
+// }
+// if(phase==="phase2"){
+//    timer=setTimeout(() => {
+//     setphase("app")
+//   }, 2000);
+// }
+// return()=>{
+//   clearTimeout(timer)
+// }
+// },[phase])
 
 
   const videoRef = useRef(null);
@@ -64,11 +66,11 @@ return()=>{
     <Search opening={opening} />
   
 
+  
 
 
 
-
-<div className='flex gap-1.5 absolute top-13 w-7 hover:w-fit px-1.5 overflow-hidden right-20 transition-all  duration-200 ease-linear glass z-[999] cursor-pointer text-white bg-transparent backdrop-blur-2xl hover:px-6  rounded-xl py-1 hover:py-1'
+<div className='flex gap-1.5 absolute top-13 w-7 hover:w-fit px-1.5 overflow-hidden right-20 transition-all  duration-200 ease-linear glass z-[999] cursor-pointer text-white bg-transparent backdrop-blur-2xl hover:px-6  rounded-xl py-1 hover:py-1  active:scale-95'
 onClick={()=>setopening(!opening)}
 >
     <i className="ri-search-line text-sm" />
@@ -90,7 +92,8 @@ onClick={()=>setopening(!opening)}
       <video src="/k2.mp4" className=" fixed h-full w-full inset-0  object-fill " muted autoPlay loop></video>
       </div>
    <Navbar open={open} setopen={setopen}/>
- 
+
+<Folder/>
 
    <Footer setopen={setopen} open={setopen} />
 

@@ -67,7 +67,7 @@ enableResizing={!open[app].full}
 
         {/* Title bar */}
         <nav className="flex items-center gap-1 px-4 py-2 border-b cursor-grab border-zinc-800">
-          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-red-500" 
+          <span className="h-3 w-3 hover:scale-110 rounded-full cursor-pointer active:scale-90 bg-red-500" 
           onClick={()=>{
             setopen(prev=>({...prev,[app]:{...prev[app],window:false}}))
           }}

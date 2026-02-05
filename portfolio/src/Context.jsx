@@ -58,9 +58,12 @@ const focuswindow = (key) => {
 }
 const[player,setplayer]=useState(false)
 const [opening, setopening] = useState(false)
+const [pop, setpop] = useState(true)
 
+
+const [count, setcount] = useState(0)
     return (
-<Context.Provider value={{open,setopen,focuswindow,zindex,setplayer,player,defaulter,opening,setopening}}>
+<Context.Provider value={{open,setcount,count,setopen,focuswindow,zindex,setplayer,player,defaulter,opening,setopening,pop,setpop}}>
     {children}
 </Context.Provider>
 

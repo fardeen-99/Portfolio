@@ -1,5 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { Context } from '../Context'
 const Navbar = ({open,setopen}) => {
+
+
+const{pop,setpop,count,setcount}=useContext(Context)
 
   const [date, setdate] = useState("")
   const getdate = () => {
@@ -44,7 +48,11 @@ const toggleFullscreen = () => {
         <div className='flex  capitalize'>
           <img src="/apple.svg" alt="appe" />
           <p className="text-sm px-2 " >fardeen khan</p>
-          <p className="text-sm hidden md:block phover" >file</p>
+          <p className="text-sm hidden md:block phover" 
+          
+          onClick={()=>{setcount(prev=>prev+1)
+          }}
+          >file</p>
           <p className="text-sm hidden md:block phover" >Window</p>
           <p className="text-sm hidden md:block phover"
           
