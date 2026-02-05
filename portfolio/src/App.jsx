@@ -28,7 +28,7 @@ const App=()=>{
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
-const[phase,setphase]=useState("phase-1")
+const[phase,setphase]=useState("phase1")
 
 
 useEffect(()=>{
