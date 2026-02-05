@@ -23,8 +23,8 @@ import Folder from "./component/Folder"
 
 const App=()=>{
 
-
-  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/worldcup.mp4")
+localStorage.clear()
+  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/cat.mp4")
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 

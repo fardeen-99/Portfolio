@@ -5,7 +5,7 @@ import { Context } from '../Context'
 const Gallery = ({setactive,onfocus,zindex}) => {
 
 
-    const array=["/Jeena.mp4","/worldcup.mp4","/sm2.mp4","/m2trim.mp4","/sbcfinal.mp4","virat.mp4","/camel.mp4","/car1.mp4","/marvel.mp4","/pinterest.mp4","/asthetic.mp4","/v2.mp4","/cat.mp4","/dhoni.mp4"]
+    const array=["/Jeena.mp4","/worldcup.mp4","https://res.cloudinary.com/dqxfqknr1/video/upload/v1770305325/sm2_yb3xkq.mp4","/m2trim.mp4","/sbcfinal.mp4","virat.mp4","/camel.mp4","/car1.mp4","/marvel.mp4","/pinterest.mp4","/asthetic.mp4","/v2.mp4","/cat.mp4","/dhoni.mp4"]
 
     const[save,setsave]=useState("")
     const{setopen,setplayer}=useContext(Context)
