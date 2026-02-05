@@ -28,26 +28,26 @@ const App=()=>{
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
-const[phase,setphase]=useState("app")
+const[phase,setphase]=useState("phase-1")
 
 
-// useEffect(()=>{
-//   let timer;
-// if(phase==="phase1"){
+useEffect(()=>{
+  let timer;
+if(phase==="phase1"){
 
-//   timer= setTimeout(() => {
-//     setphase("phase2")
-//   }, 4000);
-// }
-// if(phase==="phase2"){
-//    timer=setTimeout(() => {
-//     setphase("app")
-//   }, 2000);
-// }
-// return()=>{
-//   clearTimeout(timer)
-// }
-// },[phase])
+  timer= setTimeout(() => {
+    setphase("phase2")
+  }, 4000);
+}
+if(phase==="phase2"){
+   timer=setTimeout(() => {
+    setphase("app")
+  }, 2000);
+}
+return()=>{
+  clearTimeout(timer)
+}
+},[phase])
 
 
   const videoRef = useRef(null);
