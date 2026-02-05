@@ -28,7 +28,18 @@ const chalega=()=>{
   setplayer((prev)=>!prev)
 }
   useEffect(()=>{
+
 const chalao=(e)=>{
+
+ // 👇 check karo user typing kar raha hai ya nahi
+    const tag = e.target.tagName.toLowerCase()
+    const isTyping =
+      tag === "input" ||
+      tag === "textarea" ||
+      e.target.isContentEditable
+
+    if (isTyping) return   // ❌ shortcut disable while typing
+
   if(e.code==="Space"){
   e.preventDefault()
   
@@ -89,7 +100,7 @@ useEffect(() => {
   return (
     <>
     {/* <audio src="/audio.mp4" ref={refu} loop></audio> */}
-      <footer className='mac-dock flex gap-2 z-50 items-center justify-center  absolute bottom-5 left-[50%] transform translate-x-[-50%] px-2 sm:px-4 py-1 rounded-xl  w-[90%] overflow-x-auto sm:overflow-x-visible  no-scrollbar' >
+      <footer className='mac-dock flex gap-2 z-50 items-center justify-center  absolute bottom-5 left-[50%] transform translate-x-[-50%] px-2 sm:px-4 py-1 rounded-xl   w-[90%] overflow-x-auto sm:overflow-x-visible  no-scrollbar' >
         {/* <button onClick={goFullscreen} >
   Full Screen
 </button> */}

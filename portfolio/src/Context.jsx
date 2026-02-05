@@ -19,7 +19,9 @@ const [open, setopen] = useState({
   gallery:{window:false,z:1,full:false},
   calculator:{window:false,z:1,full:false},
   map:{window:false,z:1,full:false},
-  google:{window:false,z:1,full:true}
+  google:{window:false,z:1,full:true},
+      folder:{window:false,z:1,full:false},
+
 })
 
 const defaulter = {
@@ -34,7 +36,9 @@ const defaulter = {
   gallery:{window:false,z:1,full:false},
   calculator:{window:false,z:1,full:false},
   map:{window:false,z:1,full:false},
-    google:{window:false,z:1,full:false}
+    google:{window:false,z:1,full:false},
+    folder:{window:false,z:1,full:false},
+    
 
 }
 

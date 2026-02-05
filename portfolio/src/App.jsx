@@ -20,10 +20,11 @@ import Google from "./component/Google"
 import Search from "./component/Search"
 
 import Folder from "./component/Folder"
+import Filescreen from "./component/Filescreen"
 
 const App=()=>{
 
-localStorage.clear()
+
   const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/cat.mp4")
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
@@ -70,7 +71,7 @@ return()=>{
 
 
 
-<div className='flex gap-1.5 absolute top-13 w-7 hover:w-fit px-1.5 overflow-hidden right-20 transition-all  duration-200 ease-linear glass z-[999] cursor-pointer text-white bg-transparent backdrop-blur-2xl hover:px-6  rounded-xl py-1 hover:py-1  active:scale-95'
+<div className=' gap-1.5 absolute top-13 w-7 hidden  md:flex hover:w-fit px-1.5 overflow-hidden right-20 transition-all  duration-200 ease-linear glass z-[999] cursor-pointer text-white bg-transparent backdrop-blur-2xl hover:px-6  rounded-xl py-1 hover:py-1  active:scale-95'
 onClick={()=>setopening(!opening)}
 >
     <i className="ri-search-line text-sm" />
@@ -112,6 +113,7 @@ onClick={()=>setopening(!opening)}
 { open.map.window && <Maps zindex={open.map.z} onfocus={()=>focuswindow("map")} /> 
 }
 {open.google.window && <Google  zindex={open.google.z} onfocus={()=>focuswindow("google")} /> }
+  {open.folder.window && <Filescreen zindex={open.folder.z} onfocus={()=>focuswindow("folder")}/> }
 </div>
 <div className=" md:hidden">
  <Mobile />
