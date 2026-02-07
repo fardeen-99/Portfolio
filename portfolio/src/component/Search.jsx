@@ -1,4 +1,4 @@
-import React, { memo, useContext, useState } from 'react'
+import React, { memo, useContext, useMemo, useState } from 'react'
 import Searchicon from '../assets/search.json'
 import { Context } from '../Context'
 const Search = ({opening}) => {
