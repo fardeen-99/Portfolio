@@ -21,6 +21,7 @@ import Search from "./component/Search"
 
 import Folder from "./component/Folder"
 import Filescreen from "./component/Filescreen"
+import Window from "./component/Window"
 
 const App=()=>{
 
@@ -29,26 +30,26 @@ const App=()=>{
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
-const[phase,setphase]=useState("phase1")
+const[phase,setphase]=useState("app")
 
 
-useEffect(()=>{
-  let timer;
-if(phase==="phase1"){
+// useEffect(()=>{
+//   let timer;
+// if(phase==="phase1"){
 
-  timer= setTimeout(() => {
-    setphase("phase2")
-  }, 4000);
-}
-if(phase==="phase2"){
-   timer=setTimeout(() => {
-    setphase("app")
-  }, 2000);
-}
-return()=>{
-  clearTimeout(timer)
-}
-},[phase])
+//   timer= setTimeout(() => {
+//     setphase("phase2")
+//   }, 4000);
+// }
+// if(phase==="phase2"){
+//    timer=setTimeout(() => {
+//     setphase("app")
+//   }, 2000);
+// }
+// return()=>{
+//   clearTimeout(timer)
+// }
+// },[phase])
 
 
   const videoRef = useRef(null);
@@ -114,7 +115,8 @@ onClick={()=>setopening(!opening)}
 }
 {open.google.window && <Google  zindex={open.google.z} onfocus={()=>focuswindow("google")} /> }
   {open.folder.window && <Filescreen zindex={open.folder.z} onfocus={()=>focuswindow("folder")}/> }
-</div>
+{ open.window.window &&  <Window zindex={open.window.z} onfocus={()=>focuswindow("window")}/>
+}</div>
 <div className=" md:hidden">
  <Mobile />
 </div>

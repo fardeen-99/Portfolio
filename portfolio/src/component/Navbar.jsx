@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Context } from '../Context'
-const Navbar = ({open,setopen}) => {
+const Navbar = () => {
 
 
-const{pop,setpop,count,setcount}=useContext(Context)
+const{pop,setpop,count,setcount,setopen}=useContext(Context)
 
   const [date, setdate] = useState("")
   const getdate = () => {
@@ -53,7 +53,10 @@ const toggleFullscreen = () => {
           onClick={()=>{setcount(prev=>prev+1)
           }}
           >file</p>
-          <p className="text-sm hidden md:block phover" >Window</p>
+          <p className="text-sm hidden md:block phover"
+          onClick={()=>setopen(prev=>({...prev,window:{...prev["window"],window:!prev.window.window }   }))}
+          
+           >Window</p>
           <p className="text-sm hidden md:block phover"
           
           onClick={()=>{

@@ -31,14 +31,14 @@ if(count===0){
 
 <div className="z-[999] h-13">
   <div className="relative h-full"
-  onClick={()=>setopen((prev)=>({...prev,"folder":{...prev["folder"],window:true}}))}
+  onDoubleClick={()=>setopen((prev)=>({...prev,"folder":{...prev["folder"],window:true}}))}
   
   >
   <img src="/folder.svg" alt="" className="h-full pointer-events-none"/>
 <p className=" absolute bottom-0 left-1.5 text-white uppercase text-[10px] font-lg translate-y-3">{"folder "+count}</p>
   </div>
 </div>
-
+ 
  </Rnd>
     )
 

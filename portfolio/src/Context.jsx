@@ -21,6 +21,7 @@ const [open, setopen] = useState({
   map:{window:false,z:1,full:false},
   google:{window:false,z:1,full:true},
       folder:{window:false,z:1,full:false},
+      window:{window:false,z:1,full:false}
 
 })
 
@@ -38,6 +39,7 @@ const defaulter = {
   map:{window:false,z:1,full:false},
     google:{window:false,z:1,full:false},
     folder:{window:false,z:1,full:false},
+      window:{window:false,z:1,full:false}
     
 
 }

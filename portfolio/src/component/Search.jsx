@@ -41,7 +41,7 @@ filteru.map((ele,i)=>{
   return(
 <div key={ele.id} className='flex gap-3 text-white font-semibold p-3 h-13  rounded-2xl  hover:bg-white/15'
 
-onDoubleClick={()=>{
+onClick={()=>{
   app==="bin"?setopen(defaulter):setopen(prev=>({...prev,[app]:{...prev[app],window:true}}))
   setopening(false)
 

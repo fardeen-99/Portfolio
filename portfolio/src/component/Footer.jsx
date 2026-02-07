@@ -100,7 +100,7 @@ useEffect(() => {
   return (
     <>
     {/* <audio src="/audio.mp4" ref={refu} loop></audio> */}
-      <footer className='mac-dock flex gap-2 z-50 items-center justify-center  absolute bottom-5 left-[50%] transform translate-x-[-50%] px-2 sm:px-4 py-1 rounded-xl   w-[90%] overflow-x-auto sm:overflow-x-visible  no-scrollbar' >
+      <footer className='mac-dock md:flex gap-2 z-50 hidden  items-center justify-center  absolute bottom-5 left-[50%] transform translate-x-[-50%] px-2 sm:px-4 py-1 rounded-xl   w-[90%] overflow-x-auto sm:overflow-x-visible  no-scrollbar' >
         {/* <button onClick={goFullscreen} >
   Full Screen
 </button> */}
