@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import Macbook from "./Macbook"
 
 const Maps = ({ onfocus, zindex }) => {
@@ -25,4 +25,4 @@ const Maps = ({ onfocus, zindex }) => {
   )
 }
 
-export default Maps
+export default memo( Maps)

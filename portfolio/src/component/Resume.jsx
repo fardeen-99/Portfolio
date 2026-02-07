@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Macbook from './Macbook'
 
 const Resume = ({onfocus,zindex}) => {
@@ -16,6 +16,6 @@ const Resume = ({onfocus,zindex}) => {
   )
 }
 
-export default Resume
+export default memo( Resume)
 
 

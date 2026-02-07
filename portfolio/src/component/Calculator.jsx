@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Macbook from './Macbook'
 import Calc from './Calc'
 
@@ -14,4 +14,4 @@ const Calculator = ({onfocus,zindex}) => {
   )
 }
 
-export default Calculator
+export default memo(Calculator)

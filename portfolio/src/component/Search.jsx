@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { memo, useContext, useState } from 'react'
 import Searchicon from '../assets/search.json'
 import { Context } from '../Context'
 const Search = ({opening}) => {
@@ -6,7 +6,12 @@ const Search = ({opening}) => {
 const [search, setsearch] = useState("")
 const [data, setdata] = useState(Searchicon)
 
-const filteru=data.filter((item)=>item.name.toLowerCase().includes(search.toLowerCase()))
+const filteru = useMemo(()=>{
+  return data.filter(item =>
+    item.name.toLowerCase().includes(search.toLowerCase())
+  )
+}, [search, data])
+
 
 console.log(filteru.length)
 
@@ -65,4 +70,4 @@ onClick={()=>{
   )
 }
 
-export default Search
+export default memo( Search)

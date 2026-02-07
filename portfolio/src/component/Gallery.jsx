@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { memo, useContext, useEffect, useRef, useState } from 'react'
 import Macbook from './Macbook'
 import { Context } from '../Context'
 
@@ -67,4 +67,4 @@ const saver=(ele)=>{
   )
 }
 
-export default Gallery
+export default memo( Gallery)

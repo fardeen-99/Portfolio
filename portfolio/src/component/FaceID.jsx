@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const FaceID = () => {
@@ -13,4 +13,4 @@ const FaceID = () => {
       </div>
   );
 };
-export default FaceID
+export default memo( FaceID)

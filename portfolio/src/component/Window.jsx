@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { memo, useContext } from 'react'
 import Macbook from './Macbook'
 import logo from '../assets/search.json'
 import { Context } from '../Context'
@@ -44,4 +44,4 @@ ele.name==="Github"?<div key={ele.id}
 )
 }
 
-export default Window
+export default memo( Window)

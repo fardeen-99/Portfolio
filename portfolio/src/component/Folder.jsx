@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { memo, useContext, useEffect, useState } from 'react'
 import { Context } from '../Context'
 import { Rnd } from "react-rnd"
 const Folder = () => {
@@ -59,4 +59,4 @@ console.log(count)
   )
 }
 
-export default Folder
+export default memo( Folder)

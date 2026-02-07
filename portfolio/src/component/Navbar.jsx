@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { memo, useContext, useEffect, useState } from 'react'
 import { Context } from '../Context'
 const Navbar = () => {
 
@@ -92,4 +92,4 @@ const toggleFullscreen = () => {
   )
 }
 
-export default Navbar
+export default memo( Navbar)

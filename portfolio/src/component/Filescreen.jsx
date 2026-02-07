@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { memo, useContext, useEffect, useRef, useState } from 'react'
 import Macbook from './Macbook'
 import { Context } from '../Context'
 
@@ -38,4 +38,4 @@ useEffect(() => {
   )
 }
 
-export default Filescreen
+export default memo(Filescreen)

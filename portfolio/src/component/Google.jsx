@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Macbook from './Macbook'
 
 const Google = ({onfocus,zindex}) => {
@@ -20,4 +20,4 @@ const Google = ({onfocus,zindex}) => {
   )
 }
 
-export default Google
+export default memo( Google)

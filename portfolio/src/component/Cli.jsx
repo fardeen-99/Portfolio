@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import Macbook from './Macbook'
 import Terminal from 'react-console-emulator'
 import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark'
@@ -193,4 +193,4 @@ style={{
   )
 }
 
-export default Cli
+export default memo(Cli)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Lottie = () => {
@@ -13,4 +13,4 @@ const Lottie = () => {
       </div>
   );
 };
-export default Lottie
+export default memo( Lottie)

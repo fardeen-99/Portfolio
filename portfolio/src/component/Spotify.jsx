@@ -1,4 +1,5 @@
 
+import { memo } from 'react'
 import Macbook from './Macbook'
 
 const Spotify = ({onfocus,zindex}) => {
@@ -14,4 +15,4 @@ const Spotify = ({onfocus,zindex}) => {
   )
 }
 
-export default Spotify
+export default memo( Spotify)

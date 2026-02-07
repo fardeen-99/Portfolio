@@ -237,4 +237,4 @@ className="p-2 h-13 bin rounded-xl hover:-translate-y-[20%] hover:scale-[1.25] t
   )
 }
 
-export default Footer
+export default memo( Footer)

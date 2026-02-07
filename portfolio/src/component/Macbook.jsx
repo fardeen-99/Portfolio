@@ -1,5 +1,5 @@
 
-import { useContext, useEffect, useState } from "react"
+import { memo, useContext, useEffect, useState } from "react"
 import {Rnd} from "react-rnd"
 import { Context } from "../Context"
 
@@ -98,4 +98,4 @@ onClick={()=>setopen((prev)=>({...prev,[app]:{...prev[app],window:false}}))}
   )
 }
 
-export default Macbook
+export default memo(Macbook)

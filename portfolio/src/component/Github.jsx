@@ -1,3 +1,4 @@
+import { memo } from "react"
 import Macbook from "./Macbook"
 
 
@@ -118,4 +119,4 @@ const Github = ({onfocus,zindex}) => {
   )
 }
 
-export default Github
+export default memo(Github)

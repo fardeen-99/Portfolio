@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Macbook from './Macbook'
 
 const Calender = ({onfocus,zindex}) => {
@@ -17,4 +17,4 @@ const Calender = ({onfocus,zindex}) => {
   )
 }
 
-export default Calender
+export default memo( Calender)

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { memo, useContext, useEffect, useState } from 'react'
 import Macbook from './Macbook'
 import Markdown from "react-markdown"
 import Syntax from "react-syntax-highlighter"
@@ -28,4 +28,4 @@ const{open}=useContext(Context)
   )
 }
 
-export default Note
+export default memo( Note)
