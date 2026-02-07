@@ -14,7 +14,13 @@ const Window = ({onfocus,zindex}) => {
     {
         logo.map((ele)=>{
             return(
-ele.name==="Github"?<div key={ele.id}>
+ele.name==="Github"?<div key={ele.id}
+
+ onClick={()=>{setopen(prev=>({...prev,[ele.name.toLowerCase()]:{...prev[ele.name.toLowerCase()],window:true}}))
+           setopen(prev=>({...prev,window:{...prev[window],window:false}}))
+            }
+            }
+>
                 <img src="/github.svg" alt="" className=' p-1.5  h-full w-full rounded bg-black' />
 
 </div>:
