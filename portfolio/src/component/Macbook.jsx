@@ -73,7 +73,7 @@ enableResizing={!open[app].full}
           }}
           
           />
-          <span className="h-3 w-3 rounded-full cursor-pointer active:scale-90 bg-yellow-400"
+          <span className="h-3 w-3 hover:scale-110 rounded-full cursor-pointer active:scale-90 bg-yellow-400"
 
 onClick={()=>setopen((prev)=>({...prev,[app]:{...prev[app],window:false}}))}
 
