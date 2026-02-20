@@ -90,6 +90,7 @@ onClick={()=>setopening(!opening)}
 
 
       <video src={active} ref={videoRef}className=" fixed h-full w-full inset-0 object-fill" muted={!player} autoPlay loop></video>
+   
       <div className="md:hidden">
       <video src="/k2.mp4" className=" fixed h-full w-full inset-0  object-fill " muted autoPlay loop></video>
       </div>

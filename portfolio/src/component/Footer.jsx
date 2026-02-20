@@ -153,7 +153,7 @@ useEffect(() => {
 <Textpopup text={"Calendar"}>
         <img
                 onClick={()=>setopen(prev=>({...prev,calender:{...prev.calender,window:!prev.calender.window}}))}
-        className='px-4 py-[11px] rounded-xl calen lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/calender.svg" alt="" />
+        className='px-3.5 py-[11px] rounded-xl calen lg:hover:scale-[1.25] lg:hover:-translate-y-[20%] transition-transform duration-200 icon' src="/calender.svg" alt="" />
 </Textpopup>
 <Textpopup text={"Calculator"}>
   <img src="https://cdn.jim-nielsen.com/macos/512/calculator-2025-11-13.png?rf=1024" alt=""

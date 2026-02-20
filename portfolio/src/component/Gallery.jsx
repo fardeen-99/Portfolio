@@ -5,7 +5,7 @@ import { Context } from '../Context'
 const Gallery = ({setactive,onfocus,zindex}) => {
 
 
-    const array=["/Jeena.mp4","/worldcup.mp4","https://res.cloudinary.com/dqxfqknr1/video/upload/v1770305325/sm2_yb3xkq.mp4","/m2trim.mp4","/sbcfinal.mp4","virat.mp4","/camel.mp4","/bmw.mp4","/marvel.mp4","/pinterest.mp4","/asthetic.mp4","/v2.mp4","/cat.mp4","/dhoni.mp4"]
+    const array=["/Jeena.mp4","/worldcup.mp4","https://res.cloudinary.com/dqxfqknr1/video/upload/v1770305325/sm2_yb3xkq.mp4","/spider.mp4","/gadi.mp4","virat.mp4","/camel.mp4","/bmw.mp4","/marvel.mp4","/pinterest.mp4","/asthetic.mp4","/v2.mp4","/cat.mp4","/dhoni.mp4"]
 
     const[save,setsave]=useState("")
     const{setopen,setplayer}=useContext(Context)
@@ -52,7 +52,7 @@ const saver=(ele)=>{
             onMouseLeave={(e) => {
                 e.currentTarget.pause();
                 e.currentTarget.currentTime = 0;
-                       setplayer(true)
+                    //    setplasyer(true)
             }}
 
             ></video>
