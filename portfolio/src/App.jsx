@@ -26,7 +26,7 @@ import Window from "./component/Window"
 const App=()=>{
 
 
-  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/cat.mp4")
+  const [active, setactive] = useState(JSON.parse(localStorage.getItem("videosave"))||"/spider.mp4")
 
 const{open,setopen,zindex,focuswindow,player,setplayer,opening,setopening}=useContext(Context)
 
